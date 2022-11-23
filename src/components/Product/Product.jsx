@@ -1,4 +1,4 @@
-import Button from '../UI/Button / Button'
+import Button from '../UI/Button/Button'
 import './Product.css'
 
 export default function Product(props) {
