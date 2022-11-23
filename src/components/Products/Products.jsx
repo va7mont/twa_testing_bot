@@ -30,7 +30,7 @@ export default function Products() {
 			totalPrice: getTotalPrice(addedItems),
 			queryId,
 		}
-		fetch('http://85.119.146.179:8000/web-data', {
+		fetch('http://localhost:8000', {
 			method: 'POST',
 			headers: {
 				'Content-Type': 'application/json',
