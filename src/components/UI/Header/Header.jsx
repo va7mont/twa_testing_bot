@@ -1,4 +1,5 @@
-import { useTelegram } from "../../../hooks/useTelegram";
+import { useTelegram } from '../../../hooks/useTelegram'
+import './Header.css'
 
 export default function Header() {
 
@@ -7,7 +8,7 @@ export default function Header() {
 	return (
 		<div className={'header'}>
 			<button onClick={onClose}>
-				Закрыть
+				Close
 			</button>
 			<span className={'username'}>
 				{user?.username}

@@ -1,25 +1,28 @@
-import { useEffect } from 'react';
-import './App.css';
-import { useTelegram } from './hooks/useTelegram';
-import Header from './components/UI/Header/Header';
+import { useEffect } from 'react'
+import { Route, Routes } from 'react-router-dom'
+import './App.css'
 
-function App() {
+import { useTelegram } from './hooks/useTelegram'
+import Header from './components/UI/Header/Header'
+import Products from './components/Products/Products'
+import Form from './components/Form/Form'
 
-	const { tg, onToggleButton } = useTelegram()
+export default function App() {
+
+	const { tg } = useTelegram()
 
 	useEffect(() => {
-		tg.ready();
+		tg.ready()
 	}, [tg])
 
 	return (
 		<div className="App">
 			<Header />
+			<Routes>
+				<Route index element={<Products />} />
+				<Route path='/form' element={<Form />} />
+			</Routes>
 
-			<button onClick={onToggleButton}>
-				Toggle
-			</button>
 		</div>
-	);
+	)
 }
-
-export default App;
